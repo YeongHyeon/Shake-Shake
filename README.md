@@ -3,7 +3,7 @@ Shake-Shake Regularization
 
 ## Concept
 <div align="center">
-  <img src="./figures/shake.png" width="350">  
+  <img src="./figures/shake.png" width="600">  
   <p>The concept of Shake-Shake Regularization [1].</p>
 </div>
 
