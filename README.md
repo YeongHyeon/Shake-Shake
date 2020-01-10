@@ -11,10 +11,10 @@ Shake-Shake Regularization
 
 | |Basic CNN|Shake-Shake CNN|
 |:---|:---:|:---:|
-|Accuracy|0.99340|0.xxxxx|
-|Precision|0.99339|0.xxxxx|
-|Recall|0.99329|0.xxxxx|
-|F1-Score|0.99334|0.xxxxx|
+|Accuracy|0.99340|0.99420|
+|Precision|0.99339|0.99414|
+|Recall|0.99329|0.99408|
+|F1-Score|0.99334|0.99410|
 
 ### Basic CNN
 ```
@@ -46,7 +46,28 @@ Total | Accuracy: 0.99340, Precision: 0.99339, Recall: 0.99329, F1-Score: 0.9933
 ### Shake-Shake CNN (Basic CNN + Shake-Shake Regularization)
 ```
 Confusion Matrix
+[[ 979    0    0    0    0    0    0    1    0    0]
+ [   0 1133    1    0    0    0    1    0    0    0]
+ [   0    0 1029    0    0    0    0    3    0    0]
+ [   0    0    0 1007    0    2    0    1    0    0]
+ [   0    0    0    0  974    0    1    0    0    7]
+ [   1    0    0    6    0  884    1    0    0    0]
+ [   4    2    0    0    1    2  948    0    1    0]
+ [   0    2    1    0    0    0    0 1023    1    1]
+ [   1    0    1    2    1    1    0    2  965    1]
+ [   0    0    0    0    3    5    0    1    0 1000]]
+Class-0 | Precision: 0.99391, Recall: 0.99898, F1-Score: 0.99644
+Class-1 | Precision: 0.99648, Recall: 0.99824, F1-Score: 0.99736
+Class-2 | Precision: 0.99709, Recall: 0.99709, F1-Score: 0.99709
+Class-3 | Precision: 0.99212, Recall: 0.99703, F1-Score: 0.99457
+Class-4 | Precision: 0.99489, Recall: 0.99185, F1-Score: 0.99337
+Class-5 | Precision: 0.98881, Recall: 0.99103, F1-Score: 0.98992
+Class-6 | Precision: 0.99685, Recall: 0.98956, F1-Score: 0.99319
+Class-7 | Precision: 0.99224, Recall: 0.99514, F1-Score: 0.99369
+Class-8 | Precision: 0.99793, Recall: 0.99076, F1-Score: 0.99433
+Class-9 | Precision: 0.99108, Recall: 0.99108, F1-Score: 0.99108
 
+Total | Accuracy: 0.99420, Precision: 0.99414, Recall: 0.99408, F1-Score: 0.99410
 ```
 
 ## Requirements
