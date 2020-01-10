@@ -23,9 +23,11 @@ def training(sess, saver, neuralnet, dataset, epochs, batch_size, normalize=True
         while(True):
             x_tr, y_tr, terminator = dataset.next_train(batch_size) # y_tr does not used in this prj.
 
+            neuralnet.init_coeff_tr()
             _, summaries = sess.run([neuralnet.optimizer, neuralnet.summaries], \
                 feed_dict={neuralnet.x:x_tr, neuralnet.y:y_tr, neuralnet.batch_size:x_tr.shape[0]}, \
                 options=run_options, run_metadata=run_metadata)
+            neuralnet.init_coeff_te()
             loss, accuracy, correct_pred = sess.run([neuralnet.loss, neuralnet.accuracy, neuralnet.correct_pred], \
                 feed_dict={neuralnet.x:x_tr, neuralnet.y:y_tr, neuralnet.batch_size:x_tr.shape[0]})
             summary_writer.add_summary(summaries, iteration)
@@ -33,7 +35,7 @@ def training(sess, saver, neuralnet, dataset, epochs, batch_size, normalize=True
             iteration += 1
             if(terminator): break
 
-        print("Epoch [%d / %d] (%d iteration)  Loss:%.3f, Acc:%.3f" \
+        print("Epoch [%d / %d] (%d iteration)  Loss:%.5f, Acc:%.5f" \
             %(epoch, epochs, iteration, loss, accuracy))
         saver.save(sess, PACK_PATH+"/Checkpoint/model_checker")
         summary_writer.add_run_metadata(run_metadata, 'epoch-%d' % epoch)
@@ -71,9 +73,9 @@ def test(sess, saver, neuralnet, dataset, batch_size):
         tot_recall += recall
         tot_f1score += f1socre
         diagonal += confusion_matrix[idx_c, idx_c]
-        print("Class-%d | Precision: %.3f, Recall: %.3f, F1-Score: %.3f" \
+        print("Class-%d | Precision: %.5f, Recall: %.5f, F1-Score: %.5f" \
             %(idx_c, precision, recall, f1socre))
 
     accuracy = diagonal / np.sum(confusion_matrix)
-    print("\nTotal | Accuracy: %.3f, Precision: %.3f, Recall: %.3f, F1-Score: %.3f" \
+    print("\nTotal | Accuracy: %.5f, Precision: %.5f, Recall: %.5f, F1-Score: %.5f" \
         %(accuracy, tot_precision/dataset.num_class, tot_recall/dataset.num_class, tot_f1score/dataset.num_class))
