@@ -76,5 +76,11 @@ Total | Accuracy: 0.99420, Precision: 0.99414, Recall: 0.99408, F1-Score: 0.9941
 * Numpy 1.17.1  
 * Matplotlib 3.1.1  
 
+## Extra Material
+<div align="center">
+  <img src="./figures/shaking_hand.png" width="200">  
+  <p>The concept of Shake-Shake that I understood. The figure made by <a href="https://github.com/YeongHyeon/Shake-Shake">YeongHyeon</a>.</p>
+</div>
+
 ## Reference
 [1] Gastaldi, Xavier. <a href="https://arxiv.org/abs/1705.07485">Shake-Shake Regularization.</a> arXiv preprint arXiv:1705.07485 (2017).
