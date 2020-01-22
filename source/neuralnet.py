@@ -1,3 +1,4 @@
+import random
 import tensorflow as tf
 
 class ShakeShakeNet(object):
@@ -36,15 +37,9 @@ class ShakeShakeNet(object):
 
     def init_coeff_tr(self):
 
-        self.biasis, self.b_names, self.coeff1 = \
-            self.variable_maker(var_bank=self.biasis, name_bank=self.b_names, \
-            shape=[1], name="coeff1")
-        self.biasis, self.b_names, self.coeff2 = \
-            self.variable_maker(var_bank=self.biasis, name_bank=self.b_names, \
-            shape=[1], name="coeff2")
-        self.biasis, self.b_names, self.coeff3 = \
-            self.variable_maker(var_bank=self.biasis, name_bank=self.b_names, \
-            shape=[1], name="coeff3")
+        self.coeff1 = random.uniform(0, 1)
+        self.coeff2 = random.uniform(0, 1)
+        self.coeff3 = random.uniform(0, 1)
 
     def init_coeff_te(self):
 
