@@ -79,7 +79,7 @@ Total | Accuracy: 0.99420, Precision: 0.99414, Recall: 0.99408, F1-Score: 0.9941
 ## Extra Material
 <div align="center">
   <img src="./figures/shaking_hand.png" width="200">  
-  <p>The concept of Shake-Shake that I understood. The figure made by <a href="https://github.com/YeongHyeon/Shake-Shake">YeongHyeon</a>.</p>
+  <p>The concept of Shake-Shake that I understood. The figure made by <a href="https://github.com/YeongHyeon">YeongHyeon</a>.</p>
 </div>
 
 ## Reference
