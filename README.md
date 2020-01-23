@@ -7,6 +7,26 @@ Shake-Shake Regularization
   <p>The concept of Shake-Shake Regularization [1].</p>
 </div>
 
+<div align="center">
+  <img src="./figures/phase0.png" width="500">  
+  <p>Phase 0. Preparing for Shake-Shake.</p>
+</div>
+
+<div align="center">
+  <img src="./figures/phase1.png" width="500">  
+  <p>Phase 1. Forward propagation in training.</p>
+</div>
+
+<div align="center">
+  <img src="./figures/phase2.png" width="500">  
+  <p>Phase 2. Backward propagation in training.</p>
+</div>
+
+<div align="center">
+  <img src="./figures/phase3.png" width="500">  
+  <p>Phase 3. Forward propagation in test.</p>
+</div>
+
 ## Performance
 
 | |Basic CNN|Shake-Shake CNN|
