@@ -1,11 +1,16 @@
 Shake-Shake Regularization
 =====
+TensorFlow implementation of Shake-Shake Regularization.  
 
 ## Concept
 <div align="center">
   <img src="./figures/shake.png" width="600">  
   <p>The concept of Shake-Shake Regularization [1].</p>
 </div>
+
+## Procedure
+
+The whole procedure for using Shake-Shake Regularization is shown as below. All the figures are redesigned by <a href="https://github.com/YeongHyeon">YeongHyeon</a>.  
 
 <div align="center">
   <img src="./figures/phase0.png" width="500">  
