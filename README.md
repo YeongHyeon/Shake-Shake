@@ -1,5 +1,6 @@
 Shake-Shake Regularization
 =====
+
 TensorFlow implementation of Shake-Shake Regularization.  
 
 ## Concept
@@ -13,35 +14,42 @@ TensorFlow implementation of Shake-Shake Regularization.
 The whole procedure for using Shake-Shake Regularization is shown as below. All the figures are redesigned by <a href="https://github.com/YeongHyeon">YeongHyeon</a>.  
 
 <div align="center">
-  <img src="./figures/phase0.png" width="500">  
+  <img src="./figures/phase0.png" width="600">  
   <p>Phase 0. Preparing for Shake-Shake.</p>
 </div>
 
 <div align="center">
-  <img src="./figures/phase1.png" width="500">  
+  <img src="./figures/phase1.png" width="600">  
   <p>Phase 1. Forward propagation in training.</p>
 </div>
 
 <div align="center">
-  <img src="./figures/phase2.png" width="500">  
+  <img src="./figures/phase2.png" width="600">  
   <p>Phase 2. Backward propagation in training.</p>
 </div>
 
 <div align="center">
-  <img src="./figures/phase3.png" width="500">  
+  <img src="./figures/phase3.png" width="600">  
   <p>Phase 3. Forward propagation in test.</p>
 </div>
 
 ## Performance
 
-| |Basic CNN|Shake-Shake CNN|
+The performance is measured using below two CNN architectures.
+
+<div align="center">
+  <img src="./figures/cnn.png" width="600">  
+  <p>Two Convolutional Neural Networks for experiment.</p>
+</div>
+
+| |ConvNet8|ConvNet8 with S-S|
 |:---|:---:|:---:|
 |Accuracy|0.99340|0.99420|
 |Precision|0.99339|0.99414|
 |Recall|0.99329|0.99408|
 |F1-Score|0.99334|0.99410|
 
-### Basic CNN
+### ConvNet8
 ```
 Confusion Matrix
 [[ 979    0    0    0    0    0    0    1    0    0]
@@ -68,7 +76,7 @@ Class-9 | Precision: 0.99303, Recall: 0.98811, F1-Score: 0.99056
 Total | Accuracy: 0.99340, Precision: 0.99339, Recall: 0.99329, F1-Score: 0.99334
 ```
 
-### Shake-Shake CNN (Basic CNN + Shake-Shake Regularization)
+### ConvNet8 with S-S (ConvNet8 + Shake-Shake Regularization)
 ```
 Confusion Matrix
 [[ 979    0    0    0    0    0    0    1    0    0]
