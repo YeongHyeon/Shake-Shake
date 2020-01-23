@@ -54,7 +54,7 @@ class ShakeShakeNet(object):
         convd1 = self.conv2d(input=input, stride=1, padding='SAME', \
             filter_size=[self.k_size, self.k_size, 1, 16], \
             activation="relu", name="convd1")
-        shake1 = convd1 + (1 * shake1_1) + ((1 - self.coeff1) * shake1_2)
+        shake1 = convd1 + (self.coeff1 * shake1_1) + ((1 - self.coeff1) * shake1_2)
         max_pool1 = self.maxpool(input=shake1, ksize=2, strides=2, padding='SAME', name="max_pool1")
 
         shake2_1 = self.shake_block(input=max_pool1, num_inputs=16, num_outputs=32, name="shake2_1")
@@ -62,7 +62,7 @@ class ShakeShakeNet(object):
         convd2 = self.conv2d(input=max_pool1, stride=1, padding='SAME', \
             filter_size=[self.k_size, self.k_size, 16, 32], \
             activation="relu", name="convd2")
-        shake2 = convd2 + (1 * shake2_1) + ((1 - self.coeff2) * shake2_2)
+        shake2 = convd2 + (self.coeff2 * shake2_1) + ((1 - self.coeff2) * shake2_2)
         max_pool2 = self.maxpool(input=shake2, ksize=2, strides=2, padding='SAME', name="max_pool2")
 
         shake3_1 = self.shake_block(input=max_pool2, num_inputs=32, num_outputs=64, name="shake3_1")
@@ -70,7 +70,7 @@ class ShakeShakeNet(object):
         convd3 = self.conv2d(input=max_pool2, stride=1, padding='SAME', \
             filter_size=[self.k_size, self.k_size, 32, 64], \
             activation="relu", name="convd3")
-        shake3 = convd3 + (1 * shake3_1) + ((1 - self.coeff3) * shake3_2)
+        shake3 = convd3 + (self.coeff3 * shake3_1) + ((1 - self.coeff3) * shake3_2)
 
         [n, h, w, c] = shake3.shape
         fullcon_in = tf.compat.v1.reshape(shake3, shape=[self.batch_size, h*w*c], name="fullcon_in")
