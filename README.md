@@ -45,9 +45,9 @@ The performance is measured using below two CNN architectures.
 | |ConvNet8|ConvNet8 with S-S|
 |:---|:---:|:---:|
 |Accuracy|0.99340|0.99420|
-|Precision|0.99339|0.99414|
-|Recall|0.99329|0.99408|
-|F1-Score|0.99334|0.99410|
+|Precision|0.99339|0.99416|
+|Recall|0.99329|0.99413|
+|F1-Score|0.99334|0.99414|
 
 ### ConvNet8
 ```
@@ -79,28 +79,28 @@ Total | Accuracy: 0.99340, Precision: 0.99339, Recall: 0.99329, F1-Score: 0.9933
 ### ConvNet8 with S-S (ConvNet8 + Shake-Shake Regularization)
 ```
 Confusion Matrix
-[[ 979    0    0    0    0    0    0    1    0    0]
- [   0 1133    1    0    0    0    1    0    0    0]
- [   0    0 1029    0    0    0    0    3    0    0]
- [   0    0    0 1007    0    2    0    1    0    0]
- [   0    0    0    0  974    0    1    0    0    7]
+[[ 978    1    0    0    0    0    0    1    0    0]
+ [   0 1131    0    0    0    0    2    1    1    0]
+ [   1    1 1027    0    0    0    0    2    1    0]
+ [   0    0    0 1008    0    2    0    0    0    0]
+ [   0    0    0    0  979    0    1    0    0    2]
  [   1    0    0    6    0  884    1    0    0    0]
- [   4    2    0    0    1    2  948    0    1    0]
- [   0    2    1    0    0    0    0 1023    1    1]
- [   1    0    1    2    1    1    0    2  965    1]
- [   0    0    0    0    3    5    0    1    0 1000]]
-Class-0 | Precision: 0.99391, Recall: 0.99898, F1-Score: 0.99644
-Class-1 | Precision: 0.99648, Recall: 0.99824, F1-Score: 0.99736
-Class-2 | Precision: 0.99709, Recall: 0.99709, F1-Score: 0.99709
-Class-3 | Precision: 0.99212, Recall: 0.99703, F1-Score: 0.99457
-Class-4 | Precision: 0.99489, Recall: 0.99185, F1-Score: 0.99337
-Class-5 | Precision: 0.98881, Recall: 0.99103, F1-Score: 0.98992
-Class-6 | Precision: 0.99685, Recall: 0.98956, F1-Score: 0.99319
-Class-7 | Precision: 0.99224, Recall: 0.99514, F1-Score: 0.99369
-Class-8 | Precision: 0.99793, Recall: 0.99076, F1-Score: 0.99433
-Class-9 | Precision: 0.99108, Recall: 0.99108, F1-Score: 0.99108
+ [   3    2    0    0    2    1  948    0    2    0]
+ [   0    1    4    0    1    0    0 1020    1    1]
+ [   2    0    2    0    0    1    0    0  967    2]
+ [   0    0    0    0    4    3    0    1    1 1000]]
+Class-0 | Precision: 0.99289, Recall: 0.99796, F1-Score: 0.99542
+Class-1 | Precision: 0.99560, Recall: 0.99648, F1-Score: 0.99604
+Class-2 | Precision: 0.99419, Recall: 0.99516, F1-Score: 0.99467
+Class-3 | Precision: 0.99408, Recall: 0.99802, F1-Score: 0.99605
+Class-4 | Precision: 0.99290, Recall: 0.99695, F1-Score: 0.99492
+Class-5 | Precision: 0.99214, Recall: 0.99103, F1-Score: 0.99159
+Class-6 | Precision: 0.99580, Recall: 0.98956, F1-Score: 0.99267
+Class-7 | Precision: 0.99512, Recall: 0.99222, F1-Score: 0.99367
+Class-8 | Precision: 0.99383, Recall: 0.99281, F1-Score: 0.99332
+Class-9 | Precision: 0.99502, Recall: 0.99108, F1-Score: 0.99305
 
-Total | Accuracy: 0.99420, Precision: 0.99414, Recall: 0.99408, F1-Score: 0.99410
+Total | Accuracy: 0.99420, Precision: 0.99416, Recall: 0.99413, F1-Score: 0.99414
 ```
 
 ## Requirements
@@ -108,12 +108,6 @@ Total | Accuracy: 0.99420, Precision: 0.99414, Recall: 0.99408, F1-Score: 0.9941
 * Tensorflow 1.14.0  
 * Numpy 1.17.1  
 * Matplotlib 3.1.1  
-
-## Extra Material
-<div align="center">
-  <img src="./figures/shaking_hand.png" width="200">  
-  <p>The concept of Shake-Shake that I understood. The figure made by <a href="https://github.com/YeongHyeon">YeongHyeon</a>.</p>
-</div>
 
 ## Reference
 [1] Gastaldi, Xavier. <a href="https://arxiv.org/abs/1705.07485">Shake-Shake Regularization.</a> arXiv preprint arXiv:1705.07485 (2017).
